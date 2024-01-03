@@ -1,6 +1,11 @@
 #include "monty.h"
 
-/* Parse commands and execute corresponding function */
+/**
+ * parse_command - Parse commands and execute corresponding function
+ * @stack: Pointer to the stack's top
+ * @op: The opcode to be executed
+ * @line_number: The line number of the command in the file
+ */
 void parse_command(stack_t **stack, char *op, unsigned int line_number)
 {
 	int index;
