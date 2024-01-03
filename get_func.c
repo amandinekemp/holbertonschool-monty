@@ -26,13 +26,13 @@ void parse_command(stack_t **stack, char *op, unsigned int line_number)
 			instructions[index].f(stack, line_number);
 			return;
 		}
+	}
 
-		/* If opcode not found and not a comment */
-		if (strlen(op) != 0 && op[0] != '#')
-		{
-			/* Error message */
-			fprintf(stderr, "L%d: unknown instruction %s\n", line_number, op);
-			exit(EXIT_FAILURE);
-		}
+	/* If opcode not found and not a comment */
+	if (strlen(op) != 0 && op[0] != '#')
+	{
+		/* Error message */
+		fprintf(stderr, "L%d: unknown instruction %s\n", line_number, op);
+		exit(EXIT_FAILURE);
 	}
 }

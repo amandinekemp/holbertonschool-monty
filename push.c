@@ -1,9 +1,9 @@
 #include "monty.h"
 
-/*
+/**
  * push - Pushes an integer onto the stack.
  * @stack: A pointer to a pointer to the stack structure.
- * @n: The integer to be pushed onto the stack.
+ * @line_number: The integer to be pushed onto the stack.
  * Return: 0 if successful, 1 otherwise.
  */
 

@@ -7,7 +7,6 @@
  * @stack: Pointer to the stack's top.
  */
 
-/* Function to read a file line by line */
 void read_file(char *file, stack_t **stack)
 {
 	size_t len;
@@ -15,6 +14,7 @@ void read_file(char *file, stack_t **stack)
 	unsigned int num = 0;
 
 	char *line = NULL;
+	char *DELIMS = "\n";
 
 	FILE *fd;
 	char *command;
