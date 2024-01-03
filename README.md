@@ -290,5 +290,5 @@ To run our interpreter for Monty ByteCodes files:<br>
 
 ## ➤ Author:
 
-- Omer Ozturk [Github]()
+- Omer Ozturk [Github](https://github.com/diesos)
 - Amandine KEMP [Github](https://github.com/amandinekemp)
