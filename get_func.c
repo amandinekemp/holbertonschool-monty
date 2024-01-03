@@ -1,9 +1,38 @@
-void (*f)(stack_t **stack, unsigned int line_number)
+#include "monty.h"
+
+/* Parse commands and execute corresponding function */
+void parse_command(stack_t **stack, char *op, unsigned int line_number)
 {
-	if (strcmp("push", opcode) == 0)
-		push(stack, line_number);
-	else if (strcmp("pall", opcode) == 0)
-		pall(stack, line_number);
-	else
-		fprintf(stderr, "L%d: unknown instruction %s\n", line_number, opcode);
+	int index;
+
+	/* Array of opcodes and their functions */
+	instruction_t instructions[] = {
+		{"push", push},
+		{"pall", pall},
+		{"pint", pint},
+		/*{"pop", pop},
+		{"swap", swap},
+		{"add", add},
+		{"nop", nop},*/
+		{NULL, NULL} /* End of array */
+	};
+
+	/* Loop through instructions */
+	for (index = 0; instructions[index].opcode; index++)
+	{
+		/* If opcode matches, execute function */
+		if (strcmp(op, instructions[index].opcode) == 0)
+		{
+			instructions[index].f(stack, line_number);
+			return;
+		}
+
+		/* If opcode not found and not a comment */
+		if (strlen(op) != 0 && op[0] != '#')
+		{
+			/* Error message */
+			fprintf(stderr, "L%d: unknown instruction %s\n", line_number, op);
+			exit(EXIT_FAILURE);
+		}
+	}
 }

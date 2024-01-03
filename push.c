@@ -7,13 +7,12 @@
  * Return: 0 if successful, 1 otherwise.
  */
 
-int	push(struct stack **stack, int n)
+void push(stack_t **stack, unsigned int line_number)
 {
-	struct stack_s *new = malloc(sizeof(stack_t));
+	stack_t *new = malloc(sizeof(stack_t));
 	if (new == NULL)
-		return (1);
-	new->n = n;
+		return;
+	new->n = line_number;
 	new->next = *stack;
 	*stack = new;
-	return (0);
 }

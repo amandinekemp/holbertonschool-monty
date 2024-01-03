@@ -1,64 +1,30 @@
-int main(void)
+#include "monty.h"
+
+/**
+ * main - entry point
+ * @argc: number of arguments
+ * @argv: array of arguments
+ *
+ * Return: 0 on success, 1 on failure
+ */
+
+int main(int argc, char *argv[])
 {
-	if (ac != 2)
+	stack_t *head; /*Declare a pointer to the head of the stack*/
+
+	if (argc != 2) /*Check if the number of arguments is not equal to 2*/
 	{
+		/*If so, print an error message and exit the program*/
 		fprintf(stderr, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
-	else
-	{
-		FILE *fp;
-		char *line = NULL;
 
-		size_t len = 0;
-		ssize_t read;
-		unsigned int line_number = 0;
-
-		char *opcode;
-
-		char *n;
-
-		int i;
-
-		struct stack *stack = NULL;
-
-		fp = fopen(av[1], "r");
-		if (fp == NULL)
-		{
-			fprintf(stderr, "Error: Can't open file %s\n", av[1]);
-			exit(EXIT_FAILURE);
-		}
-		while ((read = getline(&line, &len, fp)) != -1)
-		{
-			line_number++;
-			opcode = strtok(line, " \n");
-			if (opcode == NULL)
-				continue;
-			if (strcmp("push", opcode) == 0)
-			{
-				n = strtok(NULL, " \n");
-				if (n == NULL)
-				{
-					fprintf(stderr, "L%d: usage: push integer\n", line_number);
-					exit(EXIT_FAILURE);
-				}
-				i = atoi(n);
-				if (push(&stack, i) == 1)
-				{
-					fprintf(stderr, "Error: malloc failed\n");
-					exit(EXIT_FAILURE);
-				}
-			}
-			else if (strcmp("pall", opcode) == 0)
-				pall(&stack);
-			else
-			{
-				fprintf(stderr, "L%d: unknown instruction %s\n", line_number, opcode);
-				exit(EXIT_FAILURE);
-			}
-		}
-		free(line);
-		fclose(fp);
-		exit(EXIT_SUCCESS);
-	}
+	head = NULL;
+	/* Assign the address of the head of the stack to the global pointer */
+	global_head = &head;
+	/* Read the file passed as argument and fill the stack */
+	read_file(argv[1], &head);
+	/* Register the function global_free to be called when the program exits */
+	atexit(global_free);
+	exit(EXIT_SUCCESS);
 }
