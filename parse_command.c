@@ -14,8 +14,8 @@ void parse_command(stack_t **stack, char *op, unsigned int line_number)
 	instruction_t instructions[] = {
 		{"push", push},
 		{"pall", pall},
-		{"pint", pint},
-		/*{"pop", pop},
+		/*{"pint", pint},
+		{"pop", pop},
 		{"swap", swap},
 		{"add", add},
 		{"nop", nop},*/
