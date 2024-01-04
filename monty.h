@@ -5,10 +5,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-/*
-#include <sys/types.h>
-#include <fcntl.h>
-#include <ctype.h>*/
 
 /**
 * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -46,11 +42,8 @@ typedef struct instruction_s
 /* Global variable */
 
 
-extern stack_t **global_head;
-
 /* Prototypes */
 
-void global_free(void);
 void read_file(char *file, stack_t **stack);
 void parse_command(stack_t **stack, char *op, unsigned int line_number);
 
