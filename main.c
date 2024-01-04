@@ -1,6 +1,6 @@
 #include "monty.h"
 
-stack_t **global_head = NULL; /*Declare a global pointer to the head of the stack*/
+stack_t **global_head; /*Declare a global pointer to the head of the stack*/
 
 /**
  * main - entry point
