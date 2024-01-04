@@ -3,6 +3,29 @@
 static stack_t **stack_head;
 
 /**
+* global_free - This function frees a stack.
+*/
+
+void global_free(void)
+{
+	stack_t *to_free;
+	stack_t *temp = NULL;
+	/* Get the global head of the stack */
+	to_free = *stack_head;
+
+	/* Loop through the stack */
+	while (to_free)
+	{
+		/* Save the next element */
+		temp = to_free->next;
+		/* Free the current element */
+		free(to_free);
+		/* Move to the next element */
+		to_free = temp;
+	}
+}
+
+/**
  * main - entry point
  * @argc: number of arguments
  * @argv: array of arguments
@@ -29,27 +52,4 @@ int main(int argc, char *argv[])
 	/* Register the function global_free to be called when the program exits */
 	atexit(global_free);
 	exit(EXIT_SUCCESS);
-}
-
-/**
-* global_free - This function frees a stack.
-*/
-
-void global_free(void)
-{
-	stack_t *to_free;
-	stack_t *temp = NULL;
-	/* Get the global head of the stack */
-	to_free = *stack_head;
-
-	/* Loop through the stack */
-	while (to_free)
-	{
-		/* Save the next element */
-		temp = to_free->next;
-		/* Free the current element */
-		free(to_free);
-		/* Move to the next element */
-		to_free = temp;
-	}
 }
