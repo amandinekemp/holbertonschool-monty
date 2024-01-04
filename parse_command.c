@@ -22,8 +22,8 @@ void parse_command(stack_t **stack, char *user_cmd, unsigned int line_number)
 		{NULL, NULL} /* End of array */
 	};
 
-	/* Loop through instructions */
-	for (index = 0; instructions[index].command; index++)
+		/* Loop through instructions */
+	for (index = 0; instructions[index].command != NULL; index++)
 	{
 		/* If command matches, execute function */
 		/*Si l'command correspond, la fonction est exécutée*/

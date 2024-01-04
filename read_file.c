@@ -14,7 +14,6 @@ void read_file(char *file, stack_t **stack)
 	unsigned int num = 0;
 
 	char *line = NULL;
-	char *DELIMS = " ";
 
 	FILE *fd;
 	char *command;
@@ -32,7 +31,7 @@ void read_file(char *file, stack_t **stack)
 	while ((read_line = getline(&line, &len, fd)) != -1)
 	{
 		/* Tokenize the line to get the command */
-		command = strtok(line, DELIMS);
+		command = strtok(line, " \n\t");
 		num++;
 
 		/* If a command is found(trouvé), parse(traite) it */
