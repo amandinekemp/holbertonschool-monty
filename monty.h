@@ -26,7 +26,7 @@ typedef struct stack_s
 /**
 * struct instruction_s - command and its function
 * @command: the command
-* @f: function to handle the command
+* @fct: function to handle the command
 *
 * Description: command and its function
 * for stack, queues, LIFO, FIFO
@@ -38,9 +38,6 @@ typedef struct instruction_s
 		void (*fct)(stack_t **stack, unsigned int line_number);
 
 } instruction_t;
-
-/* Global variable */
-
 
 /* Prototypes */
 
