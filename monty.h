@@ -24,18 +24,18 @@ typedef struct stack_s
 } stack_t;
 
 /**
-* struct instruction_s - opcode and its function
-* @opcode: the opcode
-* @f: function to handle the opcode
+* struct instruction_s - command and its function
+* @command: the command
+* @f: function to handle the command
 *
-* Description: opcode and its function
+* Description: command and its function
 * for stack, queues, LIFO, FIFO
 */
 typedef struct instruction_s
 {
-		char *opcode;
+		char *command;
 
-		void (*f)(stack_t **stack, unsigned int line_number);
+		void (*fct)(stack_t **stack, unsigned int line_number);
 
 } instruction_t;
 
@@ -45,7 +45,7 @@ typedef struct instruction_s
 /* Prototypes */
 
 void read_file(char *file, stack_t **stack);
-void parse_command(stack_t **stack, char *op, unsigned int line_number);
+void parse_command(stack_t **stack, char *user_cmd, unsigned int line_number);
 
 void push(stack_t **stack, unsigned int line_number);
 void pall(stack_t **stack, unsigned int line_number);
