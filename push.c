@@ -15,13 +15,14 @@ void push(stack_t **stack, unsigned int line_number)
 	int n;
 
 	token = strtok(NULL, " \n\t");
-	if (token == NULL)
+	if (token == NULL || strchr(token, '.') != NULL || strchr(token, ',') != NULL)
 	{
 		fprintf(stderr, "L%u: usage: push integer\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 
 	n = atoi(token);
+	/*printf("token [%s] n [%d]\n", token, n);*/
 	if (n == 0 && strcmp(token, "0") != 0)
 	{
 		fprintf(stderr, "L%u: usage: push integer\n", line_number);
