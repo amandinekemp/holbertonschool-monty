@@ -57,12 +57,6 @@ Stacks and queues are fundamental data structures in computing. A stack follows 
 
 ----------
 
-## ➤ Flowchart:
-
-![➤ Flowchart ➤]()
-
-----------
-
 ## ➤ Tasks:
 
 ### 0. push, pall
@@ -238,11 +232,6 @@ To use the interpreter for Monty ByteCodes files you can clone this repository:<
 
 ```git clone git@github.com:amandinekemp/holbertonschool-monty.git```
 
-### ➤ Execute:
-To run our interpreter for Monty ByteCodes files:<br>
-
-  ```./monty```
-
 ----------
 
 ## ➤ For compilation: 
@@ -253,28 +242,42 @@ To run our interpreter for Monty ByteCodes files:<br>
 
 ----------
 
+### ➤ Execute:
+To launch our interpreter for Monty ByteCodes files with file "06.m" :<br>
+
+  ```./monty bytecodes/06.m```
+
+----------
+
 ## ➤ Files description:
 
 | Filename | Description | 
 | -------- | -------- |
-| [main.h]()    |     |
-| [shell.c]()    |     |
-| [_getenv.c]()    |     |
-| [builtin_functions.c]()    |     |
-| [execute.c]()    |     |
-| [free_memory.c]()    |     |
-| [get_filepath.c]()    |     |
-| [path_append.c]()    |     |
-| [print_error.c]()    |     |
-| [get_localprog.c]()    |     |
-| [split_arguments.c]()    |     |
-| [string_functions.c]()    |     |
+| [main.c](https://github.com/amandinekemp/holbertonschool-monty/blob/main/main.c)    | This file contains the entry point of a Monty interpreter, initializing the stack, reading the bytecode, and freeing memory at the end.    |
+| [monty](https://github.com/amandinekemp/holbertonschool-monty/blob/main/monty)    | File compiled    |
+| [monty.h](https://github.com/amandinekemp/holbertonschool-monty/blob/main/monty.h)    | This header file defines the data structures and function prototypes for a Monty bytecode interpreter.    |
+| [parse_command.c](https://github.com/amandinekemp/holbertonschool-monty/blob/main/parse_command.c)    | This file contains a function that parses and executes commands for a Monty bytecode interpreter.    |
+| [read_file.c](https://github.com/amandinekemp/holbertonschool-monty/blob/main/read_file.c)    | This file contains a function that opens a file, reads its content line by line, and executes the commands found.    |
+
+----------
+
+## ➤ Files description:
+
+| Filename | Description | Opcode | 
+| -------- | -------- | -------- |
+| [add.c](https://github.com/amandinekemp/holbertonschool-monty/blob/main/add.c)    | Adds the top two elements of the stack    | add    |
+| [nop.c](https://github.com/amandinekemp/holbertonschool-monty/blob/main/nop.c)    | Function that doesn't do anything    | nop    |
+| [pall.c](https://github.com/amandinekemp/holbertonschool-monty/blob/main/pall.c)    | Prints all elements in the stack    | pall    |
+| [pint.c](https://github.com/amandinekemp/holbertonschool-monty/blob/main/pint.c)    | Prints the value at the top of the stack    | pint    |
+| [pop.c](https://github.com/amandinekemp/holbertonschool-monty/blob/main/pop.c)    | Removes the top element of the stack    | pop    |
+| [push.c](https://github.com/amandinekemp/holbertonschool-monty/blob/main/push.c)    | Pushes an integer onto the stack    | push     |
+| [swap.c](https://github.com/amandinekemp/holbertonschool-monty/blob/main/swap.c)    | Swaps the top two elements of the stack    | swap    |
 
 ----------
 
 ## ➤ Tests:
 
-
+The [bytecode](https://github.com/amandinekemp/holbertonschool-monty/tree/main/bytecodes) folder contains all the test files for this project.
 
 ----------
 
@@ -284,7 +287,7 @@ To run our interpreter for Monty ByteCodes files:<br>
 
     ```valgrind --tool=memcheck --leak-check=yes --track-origins=yes --show-leak-kinds=all -s ./monty```<br>
 
-![Test valgrind]()
+![Test valgrind](https://github.com/amandinekemp/holbertonschool-monty/blob/main/test_valgrind.png)
 
 ----------
 
