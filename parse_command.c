@@ -14,6 +14,7 @@ void parse_command(stack_t **stack, char *user_cmd, unsigned int line_number)
 	instruction_t instructions[] = {
 		{"push", push},
 		{"pall", pall},
+		{"pint", pint},
 		{NULL, NULL} /* End of array */
 	};
 
