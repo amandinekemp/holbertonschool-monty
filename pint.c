@@ -2,6 +2,7 @@
 
 /**
 * pint - Prints the value at the top of the stack
+* Imprime la valeur en haut de la pile
 * @stack: Double pointer to the top of the stack
 * @line_number: The line number of the command in the file
 *
