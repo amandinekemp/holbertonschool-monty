@@ -11,19 +11,25 @@ The aim of this project is to create an interpreter for Monty ByteCodes files fo
 
 ## ➤ Menu:
 
-* [➤ Description]()
-* [➤ Flowchart]()
-* [➤ How to use]()
-  * [Install]()
-  * [Execute]()
-  * [Librairies]()
-  * [For compilation]()
-* [➤ File Descriptions]()
-* [➤ Tests]()
-  * [Valgrind]()
-* [➤ Man]()
-* [➤ Requirements]()
-* [➤ Author]()
+* [➤ Description](https://github.com/amandinekemp/holbertonschool-monty#-description)
+* [➤ Resources](https://github.com/amandinekemp/holbertonschool-monty#-resources)
+* [➤ Requirements](https://github.com/amandinekemp/holbertonschool-monty#-requirements)
+* [➤ Tasks](https://github.com/amandinekemp/holbertonschool-monty#-tasks)
+  * [0. push, pall](https://github.com/amandinekemp/holbertonschool-monty#0-push-pall)
+  * [1. pint](https://github.com/amandinekemp/holbertonschool-monty#1-pint)
+  * [2. pop](https://github.com/amandinekemp/holbertonschool-monty#2-pop)
+  * [3. swap](https://github.com/amandinekemp/holbertonschool-monty#3-swap)
+  * [4. add](https://github.com/amandinekemp/holbertonschool-monty#4-add)
+  * [5. nop](https://github.com/amandinekemp/holbertonschool-monty#5-nop)
+* [➤ If you want to use our interpreter for Monty ByteCodes files](https://github.com/amandinekemp/holbertonschool-monty#-if-you-want-to-use-our-interpreter-for-monty-bytecodes-files-)
+  * [➤ Install](https://github.com/amandinekemp/holbertonschool-monty#-install)
+  * [➤ For compilation](https://github.com/amandinekemp/holbertonschool-monty#-for-compilation)
+  * [➤ Execute](https://github.com/amandinekemp/holbertonschool-monty#-execute)
+* [➤ Files description](https://github.com/amandinekemp/holbertonschool-monty#-files-description)
+* [➤ Opcodes](https://github.com/amandinekemp/holbertonschool-monty#-opcodes)
+* [➤ Tests](https://github.com/amandinekemp/holbertonschool-monty#-tests)
+* [➤ Valgrind](https://github.com/amandinekemp/holbertonschool-monty#-valgrind)
+* [➤ Author](https://github.com/amandinekemp/holbertonschool-monty#-author)
 
 
 ----------
@@ -261,7 +267,7 @@ To launch our interpreter for Monty ByteCodes files with file "06.m" :<br>
 
 ----------
 
-## ➤ Files description:
+## ➤ Opcodes:
 
 | Filename | Description | Opcode | 
 | -------- | -------- | -------- |
